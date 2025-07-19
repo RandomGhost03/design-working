@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="icon" type="image/x-icon" href="/imgs/logo.png" />
+
+    <!-- bootstrap css file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .nav-link:hover {
+            transform: scale(1.05);
+            color: #e76800;
+            /* change text color on hover */
+            background-color: #ffffff;
+            border-radius: 8px;
+            transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .btn-orange {
+            background-color: #ff7a00;
+            color: white;
+            padding: 10px 24px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-orange:hover {
+            background-color: #e76c00;
+            transform: scale(1.05);
+            /* Slightly zooms in */
+        }
+
+        .login-form {
+            max-width: 400px;
+            margin: 2rem auto;
+        }
+
+        .form-control:focus {
+            box-shadow: none;
+            border-color: #0d6efd;
+        }
+
+        .btn-primary {
+            background-color: #0d6efd;
+            border: none;
+            padding: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+        }
+
+        .form-check-input:checked {
+            background-color: #0d6efd;
+            border-color: #0d6efd;
+        }
+
+        #hero {
+            padding: 50px 0px;
+        }
+
+        #social-media {
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+
+        #hero {
+            background: url('/imgs/bg6.png') no-repeat center center;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Header part -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="/imgs/weblogo.png" alt="smmcute brand logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Sign in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact Us</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="/signup" class="btn-orange">Sign Up</a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Content part -->
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Left column with content and form -->
+                    <div class="col-lg-6 col-md-12 col-12">
+                        <div class="hero_content">
+                            <h4 class="text-black font-poppins">SMMCute -Top-Rated SMM Panel</h4>
+                            <h1 class="text-black">
+                                <span class="text-black">#1 Cheapest SMM Panel</span> <br>
+                            </h1>
+                            <p>
+                                Experience unparalleled growth on social media with our expert SMM services.
+                            </p>
+                            <div class="login-form bg-white p-4 rounded-3 shadow-sm">
+                                <form method="post" action="/" class="needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">
+                                            <i class="fas fa-user text-primary me-2"></i>Username
+                                        </label>
+                                        <input type="text" class="form-control" id="username" name="username" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">
+                                            <i class="fas fa-lock text-primary me-2"></i>Password
+                                        </label>
+                                        <div class="input-group">
+                                            <input type="password" class="form-control" id="password" name="password"
+                                                required>
+                                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input" id="remember">
+                                            <label class="form-check-label" for="remember">Remember me</label>
+                                        </div>
+                                        <a href="#" class="text-decoration-none">Forgot password?</a>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100 mb-3">Sign in</button>
+                                    <button type="button" class="btn btn-outline-dark w-100 mb-3">
+                                        <img src="/imgs/google.png" alt="Google" width="20" class="me-2">
+                                        Sign in with Google
+                                    </button>
+                                    <p class="text-center mb-0">
+                                        Do not have an account? <a href="/signup" class="text-decoration-none">Sign
+                                            up</a>
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right column with hero image -->
+                    <div class="col-lg-6 col-md-12 col-12">
+                        <div class="hero_image text-end">
+                            <img src="/imgs/side-img2.png" class="img-fluid" alt="best-smm-panel-service-in-bangladesh">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- All social media -->
+        <section id="social-media">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="def__title__wrap text-center">
+                            <h4>Our Services</h4>
+                            <h2>
+                                Diverse <span class="text-primary line-below">SMM Panels</span> for Every Need
+                            </h2>
+                            <p>
+                                Explore our comprehensive range of SMM panels, designed to cater to every aspect of your
+                                social media needs. From boosting your Instagram followers to enhancing your LinkedIn
+                                network, our specialized <a href="https://smmcute.com/services"
+                                    class="link">services</a>
+                                are
+                                tailored to ensure maximum impact and growth for
+                                your online presence. With SMMCute, experience the power of targeted and effective social
+                                media marketing.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-12">
+                        <div class="card home-service-card">
+                            <div class="card-header">
+                                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pills-facebook-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-facebook" type="button" role="tab"
+                                            aria-controls="pills-facebook" aria-selected="true">
+                                            <span class="icon">
+                                                <img src="https://cdn.smmsun.com/images/facebook-smm-panel-icon.png"
+                                                    class="img-fluid" alt="facebook-smm-panel-icon">
+                                            </span>
+                                            <span class="text">Facebook</span>
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-instagram-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-instagram" type="button" role="tab"
+                                            aria-controls="pills-instagram" aria-selected="false" tabindex="-1">
+                                            <span class="icon">
+                                                <img src="https://cdn.smmsun.com/images/instagram-smm-panel-icon.png"
+                                                    class="img-fluid" alt="instagram-smm-panel-icon">
+                                            </span>
+                                            <span class="text">Instagram</span>
+                                        </button>
+                                    </li>
+
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-youtube-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-youtube" type="button" role="tab"
+                                            aria-controls="pills-youtube" aria-selected="false" tabindex="-1">
+                                            <span class="icon">
+                                                <img src="https://cdn.smmsun.com/images/youtube-smm-panel-icon.png"
+                                                    class="img-fluid" alt="youtube-smm-panel-icon">
+                                            </span>
+                                            <span class="text">Youtube</span>
+                                        </button>
+                                    </li>
+
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-tiktok-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-tiktok" type="button" role="tab"
+                                            aria-controls="pills-tiktok" aria-selected="false" tabindex="-1">
+                                            <span class="icon">
+                                                <img src="https://cdn.smmsun.com/images/tiktok-smm-panel-icon.png"
+                                                    class="img-fluid" alt="tiktok-smm-panel-icon">
+                                            </span>
+                                            <span class="text">TikTok</span>
+                                        </button>
+                                    </li>
+
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-linkedin-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-linkedin" type="button" role="tab"
+                                            aria-controls="pills-linkedin" aria-selected="false" tabindex="-1">
+                                            <span class="icon">
+                                                <img src="https://cdn.smmsun.com/images/linkedin-smm-panel-icon.png"
+                                                    class="img-fluid" alt="linkedin-smm-panel-icon">
+                                            </span>
+                                            <span class="text">Linkedin</span>
+                                        </button>
+                                    </li>
+
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-telegram-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-telegram" type="button" role="tab"
+                                            aria-controls="pills-telegram" aria-selected="false" tabindex="-1">
+                                            <span class="icon">
+                                                <img src="https://cdn.smmsun.com/images/telegram-smmpanel-icon.png"
+                                                    class="img-fluid" alt="telegram-smmpanel-icon">
+                                            </span>
+                                            <span class="text">Telegram</span>
+                                        </button>
+                                    </li>
+
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-discord-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-discord" type="button" role="tab"
+                                            aria-controls="pills-discord" aria-selected="false" tabindex="-1">
+                                            <span class="icon">
+                                                <img src="https://cdn.smmsun.com/images/smm-panel-discord-icon.png"
+                                                    class="img-fluid" alt="smm-panel-discord-icon">
+                                            </span>
+                                            <span class="text">Discord</span>
+                                        </button>
+                                    </li>
+
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-x-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-x" type="button" role="tab" aria-controls="pills-x"
+                                            aria-selected="false" tabindex="-1">
+                                            <span class="icon">
+                                                <img src="https://cdn.smmsun.com/images/twitter-smm-panel-icon.png"
+                                                    class="img-fluid" alt="twitter-smm-panel-icon">
+                                            </span>
+                                            <span class="text">X-Twitter</span>
+                                        </button>
+                                    </li>
+
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-pinterest-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-pinterest" type="button" role="tab"
+                                            aria-controls="pills-pinterest" aria-selected="false" tabindex="-1">
+                                            <span class="icon">
+                                                <img src="https://cdn.smmsun.com/images/pinterest-icon.png"
+                                                    class="img-fluid" alt="">
+                                            </span>
+                                            <span class="text">Pinterest</span>
+                                        </button>
+                                    </li>
+
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-twich-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-twich" type="button" role="tab"
+                                            aria-controls="pills-twich" aria-selected="false" tabindex="-1">
+                                            <span class="icon">
+                                                <img src="https://cdn.smmsun.com/images/twich-smm-panel.png"
+                                                    class="img-fluid" alt="twich-smm-panel">
+                                            </span>
+                                            <span class="text">Twitch</span>
+                                        </button>
+                                    </li>
+
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-soundcloud-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-soundcloud" type="button" role="tab"
+                                            aria-controls="pills-soundcloud" aria-selected="false" tabindex="-1">
+                                            <span class="icon">
+                                                <img src="https://cdn.smmsun.com/images/sound-cloud-icon.png"
+                                                    class="img-fluid" alt="sound-cloud-icon">
+                                            </span>
+                                            <span class="text">Sound Cloud</span>
+                                        </button>
+                                    </li>
+
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-web-tab" data-bs-toggle="pill"
+                                            data-bs-target="#pills-web" type="button" role="tab"
+                                            aria-controls="pills-web" aria-selected="false" tabindex="-1">
+                                            <span class="icon">
+                                                <img src="https://cdn.smmsun.com/images/website-traffic-of-smm-panel-icon.png"
+                                                    class="img-fluid" alt="website-traffic-of-smm-panel-icon">
+                                            </span>
+                                            <span class="text">Web Traffic</span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="pills-facebook" role="tabpanel"
+                                        aria-labelledby="pills-facebook-tab">
+                                        <p>Facebook SMM Panel content goes here.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-instagram" role="tabpanel"
+                                        aria-labelledby="pills-instagram-tab">
+                                        <p>Instagram SMM Panel content goes here.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-youtube" role="tabpanel"
+                                        aria-labelledby="pills-youtube-tab">
+                                        <p>YouTube SMM Panel content goes here.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-tiktok" role="tabpanel"
+                                        aria-labelledby="pills-tiktok-tab">
+                                        <p>TikTok SMM Panel content goes here.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-linkedin" role="tabpanel"
+                                        aria-labelledby="pills-linkedin-tab">
+                                        <p>LinkedIn SMM Panel content goes here.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-telegram" role="tabpanel"
+                                        aria-labelledby="pills-telegram-tab">
+                                        <p>Telegram SMM Panel content goes here.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-discord" role="tabpanel"
+                                        aria-labelledby="pills-discord-tab">
+                                        <p>Discord SMM Panel content goes here.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-x" role="tabpanel"
+                                        aria-labelledby="pills-x-tab">
+                                        <p>X-Twitter SMM Panel content goes here.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-pinterest" role="tabpanel"
+                                        aria-labelledby="pills-pinterest-tab">
+                                        <p>Pinterest SMM Panel content goes here.</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="pills-twich" role="tabpanel"
+                                        aria-labelledby="pills-twich-tab">
+                                        <p>Twitch SMM Panel content goes here.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </section>
+    </main>
+    <!-- bootstrap js file -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script>
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            const passwordInput = document.getElementById('password');
+            const icon = this.querySelector('i');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        });
+    </script>
+</body>
+
+</html>
